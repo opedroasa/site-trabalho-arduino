@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho 1</title>
+    <link rel="stylesheet" href="trabalho1.css"
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        Voltar
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    
+        <header>
+            <h1>
+                Semáforo Inteligente
+            </h1>
+
+            <h2>
+                Realização: 14/08/2024
+            </h2>
+    
+            <img src=
+                "./img/circuito1.jpg">
+            </img>
+
+            <img src=
+                "./img/circuito2.jpg">
+            </img>
+                
+        </header>
+    
+        <main>
+            <section>
+                <h3>
+                    Objetivo
+                </h3>
+                <p>
+                    Criar Semáforo Inteligente com Arduino
+                </p>
+            </section>
+            <section>
+                <h3 style="margin-top: 60px;">
+                    Materiais Utilizados
+                </h3>
+                <p>
+                    Arduino Uno R3 (Placa microcontroladora)
+                </p>
+                <p>
+                    Protoboard (Realizar as conexões sem necessidade de solda)
+                </p>
+                <p>
+                    LEDs (3 unidades: verde, amarelo e vermelho)
+                </p>
+                <p>
+                    Resistores (Proteção para evitar que os LEDs queimassem)
+                </p>
+            </section>
+            <section>
+                <h3 style="margin-top: 60px;">
+                    Diagrama do Circuito
+                </h3>
+                <p>
+                    O circuito foi montado conectando os três LEDs em pinos digitais do Arduino.
+                </p>
+                <p>
+                    Cada LED foi associado a um resistor para limitar a corrente e evitar danos aos LEDs.
+                </p>
+                <p>
+                    A outra perna de cada LED foi conectada ao GND na protoboard.
+                </p>
+            </section>
+            <section>
+                <h3 style="margin-top: 60px;">
+                    Código Fonte & Procedimento
+                </h3>
+                <img src="./img/circuito4.png">
+                <p>
+                    Código em C++ utilizando a IDE do Arduino.
+                </p>
+                <p>
+                    Configuramos os pinos digitais como saídas no void setup(), usando o comando pinMode().<br>
+                    Implementamos a lógica para acender e apagar os LEDs de forma sequencial no void loop(),<br>
+                    utilizando digitalWrite() para definir o estado de cada pino (HIGH para acender e LOW<br>
+                    para apagar). Além disso, utilizamos o comando delay() para controlar o tempo entre as<br>
+                    mudanças de estado dos LEDs.
+                </p>
+            </section>
+            <section>
+                <h3 style="margin-top: 60px;">
+                    Resultados & Conclusão
+                </h3>
+                <p>
+                    Ao executar o código, os três LEDs acenderam conforme o esperado, de acordo com a programação.
+                </p>
+                <video src="./video/circuitovideo.mp4" controls>
+                </video>
+                <p>
+                    O projeto foi bem-sucedido, reforçando conceitos de eletrônica básica e programação. Esse<br>
+                    exercício nos preparou para desafios mais complexos, envolvendo sensores, potenciômetros e<br>
+                    outros componentes.
+                </p>
+            </section>
+        </main> 
+    </div>   
+</body>
+</html>
