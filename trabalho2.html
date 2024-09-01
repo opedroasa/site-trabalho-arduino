@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trabalho 1</title>
+    <title>Trabalho 2</title>
     <link rel="stylesheet" href="trabalho2.css"
 </head>
 <body>
@@ -19,14 +19,95 @@
         </nav>
     
         <header>
-                Trabalho 2 (Em processo)
+            <h1>
+                Led Controlado Por Potenciômetro
+            </h1>
+
+            <h2>
+                Realização: 28/08/2024
+            </h2>
+    
+            <img src=
+                "./img/potenciometro1.jpg">
+            </img>
+
+            <img src=
+                "./img/potenciometro2.jpg">
+            </img>
+                
         </header>
     
         <main>
             <section>
-                
+                <h3>
+                    Objetivo
+                </h3>
+                <p>
+                    Ascender led e o controlar com o uso de potenciometro.
+                </p>
             </section>
-            
+            <section>
+                <h3 style="margin-top: 60px;">
+                    Materiais Utilizados
+                </h3>
+                <p>
+                    Arduino Uno R3 (Placa microcontroladora)
+                </p>
+                <p>
+                    Protoboard (Realizar as conexões sem necessidade de solda)
+                </p>
+                <p>
+                    LED (vermelho)
+                </p>
+                <p>
+                    Resistor (Proteção para evitar que o LED queimasse)
+                </p>
+                <p>
+                    Potenciômetro (Controlar a intensidade do led)
+                </p>
+            </section>
+            <section>
+                <h3 style="margin-top: 60px;">
+                    Diagrama do Circuito
+                </h3>
+                <p>
+                    O circuito consiste em um LED conectado a uma porta digital do Arduino Uno e um potenciômetro
+                </p>
+                <p>
+                    conectado a uma porta analógica. O potenciômetro é usado para controlar a intensidade do LED. 
+                </p>
+            </section>
+            <section>
+                <h3 style="margin-top: 60px;">
+                    Código Fonte & Procedimento
+                </h3>
+                <img src="./img/potenciometro3.jpg">
+                <p>
+                    Código em C++ utilizando a IDE do Arduino.
+                </p>
+                <p>
+                    O código começa configurando os pinos do Arduino: um para ler o valor do potenciômetro e outro<br>
+                    para controlar o LED. Em seguida, ele lê o valor do potenciômetro, que varia de 0 a 1023. Esse<br>
+                    valor é convertido para um intervalo de 0 a 255, que é usado para ajustar a intensidade do LED.<br>
+                    O código então ajusta a intensidade do LED com base nesse valor convertido. Além disso, ele envia<br>
+                    esses valores para o computador para que você possa monitorá-los em tempo real. O processo se<br>
+                    repete continuamente, ajustando a intensidade do LED conforme o valor do potenciômetro muda.
+                </p>
+            </section>
+            <section>
+                <h3 style="margin-top: 60px;">
+                    Resultados & Conclusão
+                </h3>
+                <p>
+                    Ao girar o potenciômetro, a intensidade do LED varia de acordo com a posição do potenciômetro.
+                </p>
+                <video src="./video/potenciometrovideo.mp4" controls>
+                </video>
+                <p>
+                    O experimento demonstrou com sucesso como controlar a intensidade de um LED usando um<br>
+                    potenciômetro e um Arduino Uno.
+                </p>
+            </section>
         </main> 
     </div>   
 </body>
