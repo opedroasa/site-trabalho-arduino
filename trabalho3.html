@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trabalho 1</title>
+    <title>Trabalho 3</title>
     <link rel="stylesheet" href="trabalho3.css"
 </head>
 <body>
@@ -19,14 +19,99 @@
         </nav>
     
         <header>
-                Trabalho 3 (Em processo)
+            <h1>
+                Led Controlado Por Sensor de Distância Ultrassônico
+            </h1>
+
+            <h2>
+                Realização: 04/09/2024
+            </h2>
+    
+            <img src=
+                "./img/aprox1.jpg">
+            </img>
+
+            <img src=
+                "./img/aprox2.jpg">
+            </img>
+                
         </header>
     
         <main>
             <section>
-                
+                <h3>
+                    Objetivo
+                </h3>
+                <p>
+                    Controlar led com base na aproximação de objetos.
+                </p>
             </section>
-            
+            <section>
+                <h3 style="margin-top: 60px;">
+                    Materiais Utilizados
+                </h3>
+                <p>
+                    Arduino Uno R3 (Placa microcontroladora)
+                </p>
+                <p>
+                    Protoboard (Realizar as conexões sem necessidade de solda)
+                </p>
+                <p>
+                    LED (vermelho)
+                </p>
+                <p>
+                    Resistor (Proteção para evitar que o LED queimasse)
+                </p>
+                <p>
+                    Sensor Ultrassônico HC-SR04 (detectar e medir a distância de objetos)
+                </p>
+            </section>
+            <section>
+                <h3 style="margin-top: 60px;">
+                    Diagrama do Circuito
+                </h3>
+                <p>
+                    O projeto utiliza um sensor ultrassônico (HC-SR04) para medir distâncias e acionar um LED com <br>
+                    base nessa leitura. O sensor ultrassônico funciona emitindo pulsos ultrassônicos e medindo o  <br>
+                    tempo que esses pulsos levam para retornar após baterem em um objeto. A distância é então     <br>
+                    calculada com base nesse tempo.
+                </p>
+            </section>
+            <section>
+                <h3 style="margin-top: 60px;">
+                    Código Fonte & Procedimento
+                </h3>
+                <img src="./img/aprox3.jpg">
+                <p>
+                    Código em C++ utilizando a IDE do Arduino.
+                </p>
+                <p>
+                    Configuramos os pinos digitais do Arduino no void setup(), definindo o pino Trig como saída e o <br>
+                    Echo como entrada, utilizando o comando pinMode(). A lógica de controle é implementada no void <br>
+                    loop(), onde o Arduino envia um pulso ultrassônico pelo Trig usando digitalWrite() e mede o tempo <br>
+                    de retorno do eco no Echo com pulseIn(). Quando a distância detectada estiver dentro do intervalo <br>
+                    de 40 cm a 250 cm, passando pela estrutura IF/ELSE, usando o comando digitalWrite() o led será ativado.<br>
+
+                </p>
+            </section>
+            <section>
+                <h3 style="margin-top: 60px;">
+                    Resultados & Conclusão
+                </h3>
+                <p>
+                    Após carregar o código e montar o circuito, o sistema foi capaz de medir com precisão a distância<br>
+                    de objetos próximos. Quando um objeto foi detectado entre 40 cm e 250 cm, o LED acendeu corretamente<br>
+                    O sensor ultrassônico HC-SR04 demonstrou uma boa resposta na medição de distâncias dentro do intervalo<br>
+                    programado.
+                </p>
+                <video src="./video/aproxvideo.MP4" controls>
+                </video>
+                <p>
+                    Este projeto simples demonstra como sensores ultrassônicos podem ser usados para detectar objetos<br>
+                    a uma certa distância. É útil em aplicações como robótica, sistemas de segurança e automação <br>
+                    residencial.
+                </p>
+            </section>
         </main> 
     </div>   
 </body>
