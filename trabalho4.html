@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho 4</title>
+    <link rel="stylesheet" href="trabalho4.css"
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        Voltar
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    
+        <header>
+            <h1>
+                Led RGB Controlado Por Sensor Ultrassônico
+            </h1>
+
+            <h2>
+                Realização: 11/09/2024
+            </h2>
+    
+            <img src=
+                "./img/aproxRgb1.jpg">
+            </img>
+
+            <img src=
+                "./img/aproxRgb2.jpg">
+            </img>
+                
+        </header>
+    
+        <main>
+            <section>
+                <h3>
+                    Objetivo
+                </h3>
+                <p>
+                    Controlar as cores de um LED RGB com base na distância de objetos, utilizando um sensor<br>
+                    ultrassônico. Dependendo da proximidade do objeto, o LED mudará de cor para representar<br>
+                    diferentes faixas de distância.
+                </p>
+            </section>
+            <section>
+                <h3 style="margin-top: 60px;">
+                    Materiais Utilizados
+                </h3>
+                <p>
+                    Arduino Uno R3 (Placa microcontroladora)
+                </p>
+                <p>
+                    Protoboard (Realizar as conexões sem necessidade de solda)
+                </p>
+                <p>
+                    LED RGB (Para emitir diferentes cores)
+                </p>
+                <p>
+                    Resistores (Proteção para evitar que o LED RGB seja danificado)
+                </p>
+                <p>
+                    Sensor Ultrassônico HC-SR04 (Para medir a distância do objeto)
+                </p>
+                <p>
+                    Jumpers (Fios de conexão)
+                </p>
+            </section>
+            <section>
+                <h3 style="margin-top: 60px;">
+                    Diagrama do Circuito
+                </h3>
+                <p>
+                    O projeto utiliza um sensor ultrassônico HC-SR04 para medir a distância de objetos e controlar<br>
+                    as cores de um LED RGB com base nas leituras. O sensor emite pulsos ultrassônicos que retornam<br>
+                    ao atingir um objeto, e o Arduino calcula a distância com base no tempo que o pulso leva para<br>
+                    retornar. Dependendo da distância, o LED RGB acende em diferentes cores:<br>
+                    <br> - Verde para distâncias maiores que 50 cm
+                    <br> - Amarelo para distâncias menores que 30 cm
+                    <br> - Rosa para distâncias entre 30 cm e 50 cm
+                </p>
+            </section>
+            <section>
+                <h3 style="margin-top: 60px;">
+                    Código Fonte & Procedimento
+                </h3>
+                <img src="./img/aproxRgb3.jpg">
+                <p>
+                    Código em C++ utilizando a IDE do Arduino.
+                </p>
+                <p>
+                    Conecte o sensor ultrassônico HC-SR04 ao Arduino, utilizando os pinos 7 (Echo) e 8 (Trig).<br>
+                    Conecte os pinos do LED RGB (Vermelho, Verde e Azul) aos pinos 3 (Vermelho), 6 (Verde) e 5 (Azul) do<br>
+                    Arduino, cada um com seus respectivos resistores. No código, configuramos os pinos de entrada e saída<br>
+                    no void setup(). O pino Trig é configurado como saída para enviar os pulsos ultrassônicos, enquanto o<br>
+                    Echo é configurado como entrada para receber o pulso refletido. No void loop(), o Arduino envia um pulso<br>
+                    ultrassônico através do Trig e mede o tempo que o pulso leva para retornar usando o Echo. O valor da<br>
+                    distância é calculado e impresso no monitor serial. Dependendo da distância, o LED RGB é configurado<br>
+                    para acender em diferentes cores (verde, amarelo, ou rosa) com base nos intervalos estabelecidos no código.
+                </p>
+            </section>
+            <section>
+                <h3 style="margin-top: 60px;">
+                    Resultados & Conclusão
+                </h3>
+                <p>
+                    Após carregar o código no Arduino e montar o circuito, o sistema foi capaz de medir a distância com<br>
+                    precisão. O LED RGB mudava de cor corretamente conforme a aproximação de objetos
+                </p>
+                <video src="./video/aproxRgbvideo.MP4" controls>
+                </video>
+                <p>
+                    O sensor ultrassônico HC-SR04 mostrou-se eficaz para detecção de distâncias dentro do intervalo<br>
+                    programado. Este projeto demonstrou o uso de um LED RGB para indicar visualmente a proximidade de<br>
+                    objetos, sendo uma aplicação interessante para sistemas de alerta visual, robótica e automação.
+                </p>
+            </section>
+        </main> 
+    </div>   
+</body>
+</html>

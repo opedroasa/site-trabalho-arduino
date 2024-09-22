@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho 5</title>
+    <link rel="stylesheet" href="trabalho5.css"
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        Voltar
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    
+        <header>
+            <h1>
+                Led RGB Controlado Por Potenciômetros
+            </h1>
+
+            <h2>
+                Realização: 18/09/2024
+            </h2>
+    
+            <img src=
+                "./img/rgbPot1.jpg">
+            </img>
+
+            <img src=
+                "./img/rgbPot2.jpg">
+            </img>
+                
+        </header>
+    
+        <main>
+            <section>
+                <h3>
+                    Objetivo
+                </h3>
+                <p>
+                    Controlar as cores de um LED RGB utilizando três potenciômetros, permitindo ajustar individualmente<br>
+                    as intensidades dos canais vermelho, azul e verde do LED, criando uma variedade de cores.
+                </p>
+            </section>
+            <section>
+                <h3 style="margin-top: 60px;">
+                    Materiais Utilizados
+                </h3>
+                <p>
+                    Arduino Uno R3 (Placa microcontroladora)
+                </p>
+                <p>
+                    Protoboard (Realizar as conexões sem necessidade de solda)
+                </p>
+                <p>
+                    LED RGB (Para emitir diferentes cores)
+                </p>
+                <p>
+                    Resistores (Proteção para evitar que o LED RGB seja danificado)
+                </p>
+                <p>
+                    3 Potenciômetros (Para ajustar as intensidades de cada canal do LED)
+                </p>
+                <p>
+                    Jumpers (Fios de conexão)
+                </p>
+            </section>
+            <section>
+                <h3 style="margin-top: 60px;">
+                    Diagrama do Circuito
+                </h3>
+                <p>
+                    Neste projeto, três potenciômetros são utilizados para controlar os valores analógicos dos três canais<br>
+                    de cores do LED RGB: vermelho, verde e azul. Cada potenciômetro está conectado a uma entrada analógica<br>
+                    do Arduino (A0, A1 e A2), e os sinais lidos são convertidos em valores digitais para ajustar a intensidade<br>
+                    do LED RGB. Os potenciômetros atuam como controladores de intensidade, permitindo que o usuário ajuste as<br>
+                    cores de forma manual, criando uma vasta combinação de cores com base nas intensidades dos três canais.
+                </p>
+            </section>
+            <section>
+                <h3 style="margin-top: 60px;">
+                    Código Fonte & Procedimento
+                </h3>
+                <img src="./img/rgbPot3.jpg">
+                <p>
+                    Código em C++ utilizando a IDE do Arduino.
+                </p>
+                <p>
+                    Conecte o LED RGB aos pinos digitais 3 (vermelho), 5 (azul) e 6 (verde) do Arduino, cada um com seus<br>
+                    respectivos resistores. Conecte os três potenciômetros aos pinos analógicos A0 (vermelho), A1 (azul)<br>
+                    e A2 (verde) do Arduino. As leituras dos potenciômetros serão usadas para controlar a intensidade das<br>
+                    cores. No código, os potenciômetros são configurados como entradas analógicas, e os pinos do LED RGB<br>
+                    são configurados como saídas. O loop principal do código lê os valores analógicos de cada potenciômetro<br>
+                    usando analogRead(), mapeando esses valores (que variam de 0 a 1023) para a faixa de intensidade de cor<br>
+                    de 0 a 255 utilizando a função map(). Em seguida, os valores mapeados são aplicados às saídas PWM dos pinos<br>
+                    do LED RGB utilizando analogWrite(), ajustando assim a intensidade de cada cor. Os valores dos potenciômetros<br>
+                    também são exibidos no monitor serial para monitoramento em tempo real.
+                </p>
+            </section>
+            <section>
+                <h3 style="margin-top: 60px;">
+                    Resultados & Conclusão
+                </h3>
+                <p>
+                    Após carregar o código e montar o circuito, o sistema funcionou corretamente. Através da rotação dos três<br>
+                    potenciômetros, foi possível ajustar as intensidades dos canais vermelho, verde e azul do LED RGB. Isso<br>
+                    permitiu a criação de diversas combinações de cores, demonstrando a capacidade de controle analógico com<br>
+                    o Arduino.
+                </p>
+                <video src="./video/rgbPotVideo.MP4" controls>
+                </video>
+                <p>
+                    Os potenciômetros forneceram uma interface simples e eficaz para controlar as cores do LED RGB. A precisão<br>
+                    e o tempo de resposta dos controles foram adequados para esta aplicação.
+                </p>
+            </section>
+        </main> 
+    </div>   
+</body>
+</html>
