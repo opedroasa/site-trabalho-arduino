@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho 6</title>
+    <link rel="stylesheet" href="trabalho6.css"
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        Voltar
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    
+        <header>
+            <h1>
+                Led RGB Controlado Por Botão de Pressão
+            </h1>
+
+            <h2>
+                Realização: 09/10/2024
+            </h2>
+    
+            <img src=
+                "./img/bot1.jpg">
+            </img>
+
+            <img src=
+                "./img/bot2.jpg">
+            </img>
+                
+        </header>
+    
+        <main>
+            <section>
+                <h3>
+                    Objetivo
+                </h3>
+                <p>
+                    Controlar o estado de um LED (ligado/desligado) utilizando um botão de pressão. O LED acende quando<br>
+                    o botão é pressionado e apaga quando o botão é solto.
+                </p>
+            </section>
+            <section>
+                <h3 style="margin-top: 60px;">
+                    Materiais Utilizados
+                </h3>
+                <p>
+                    Arduino Uno R3 (Placa microcontroladora)
+                </p>
+                <p>
+                    Protoboard (Realizar as conexões sem necessidade de solda)
+                </p>
+                <p>
+                    LED (Para indicar o estado do botão)
+                </p>
+                <p>
+                    Botão de Pressão (Para controlar o estado do LED)
+                </p>
+                <p>
+                    Jumpers (Fios de conexão)
+                </p>
+            </section>
+            <section>
+                <h3 style="margin-top: 60px;">
+                    Diagrama do Circuito
+                </h3>
+                <p>
+                    Neste projeto, um botão de pressão é utilizado para controlar o estado de um LED simples. Quando o botão<br>
+                    é pressionado, o LED acende. Quando o botão é liberado, o LED se apaga. A lógica é baseada na leitura<br>
+                    digital do botão, usando o resistor de pull-up interno do Arduino, configurado no pino de entrada do botão.<br>
+                    O botão está conectado ao pino digital 3 do Arduino, e o LED está conectado ao pino digital 5. O resistor<br>
+                    pull-up interno garante que o valor lido no pino do botão seja 1 (alto) quando o botão não está pressionado,<br>
+                    e 0 (baixo) quando o botão está pressionado.
+                </p>
+            </section>
+            <section>
+                <h3 style="margin-top: 60px;">
+                    Código Fonte & Procedimento
+                </h3>
+                <img src="./img/bot3.jpg">
+                <p>
+                    Código em C++ utilizando a IDE do Arduino.
+                </p>
+                <p>
+                    1- Conecte o LED ao pino digital 5 do Arduino, utilizando um resistor em série para proteger o LED.<br>
+                    2- Conecte o botão de pressão ao pino digital 3 do Arduino. A configuração do resistor pull-up interno<br>
+                    é ativada no código com pinMode(botao, INPUT_PULLUP), eliminando a necessidade de um resistor externo.<br>
+                    3- No código, o pino do botão é lido digitalmente com digitalRead() para detectar se o botão está<br>
+                    pressionado ou não.<br>
+                    4- O valor lido do botão (alto ou baixo) determina o estado do LED: se o botão não estiver pressionado,<br>
+                    o LED permanecerá apagado; se o botão for pressionado, o LED acenderá.<br>
+                    5- O ciclo continua indefinidamente no loop(), permitindo o controle contínuo do LED com base nas<br>
+                    interações com o botão.
+                </p>
+            </section>
+            <section>
+                <h3 style="margin-top: 60px;">
+                    Resultados & Conclusão
+                </h3>
+                <p>
+                    Após carregar o código e montar o circuito, o sistema funcionou conforme esperado. O LED acendeu ao<br>
+                    pressionar o botão de pressão e apagou ao soltar o botão.
+                </p>
+                <video src="./video/botVideo.MP4" controls>
+                </video>
+                <p>
+                    Este projeto simples é uma introdução ao uso de botões de pressão. Demonstrou como podemos controlar<br>
+                    dispositivos (como LEDs) com base em entradas digitais, sendo útil em aplicações como controles manuais<br>
+                    de dispositivos eletrônicos.
+                </p>
+            </section>
+        </main> 
+    </div>   
+</body>
+</html>
