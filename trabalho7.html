@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho 7</title>
+    <link rel="stylesheet" href="trabalho7.css"
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        Voltar
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    
+        <header>
+            <h1>
+                Servo Motor controlado por Sensor de Proximidade
+            </h1>
+
+            <h2>
+                Realização: 16/10/2024
+            </h2>
+    
+            <img src=
+                "./img/servo1.jpg">
+            </img>
+
+            <img src=
+                "./img/servo2.jpg">
+            </img>
+                
+        </header>
+    
+        <main>
+            <section>
+                <h3>
+                    Objetivo
+                </h3>
+                <p>
+                    Controlar a rotação de um servo motor com base na distância medida por um sensor ultrassônico. O servo<br>
+                    motor se ajusta automaticamente de acordo com a proximidade de um objeto detectado pelo sensor.
+                </p>
+            </section>
+            <section>
+                <h3 style="margin-top: 60px;">
+                    Materiais Utilizados
+                </h3>
+                <p>
+                    Arduino Uno R3 (Placa microcontroladora)
+                </p>
+                <p>
+                    Protoboard (Realizar as conexões sem necessidade de solda)
+                </p>
+                <p>
+                    Servo Motor (Para realizar o movimento rotacional)
+                </p>
+                <p>
+                    Sensor Ultrassônico HC-SR04 (Para medir a distância de objetos)
+                </p>
+                <p>
+                    Jumpers (Fios de conexão)
+                </p>
+            </section>
+            <section>
+                <h3 style="margin-top: 60px;">
+                    Diagrama do Circuito
+                </h3>
+                <p>
+                    Este projeto usa um sensor ultrassônico HC-SR04 para medir a distância de um objeto e controlar o ângulo de<br>
+                    rotação de um servo motor. O servo ajusta sua posição de acordo com a distância detectada, proporcionando um<br>
+                    controle dinâmico do ângulo com base na leitura do sensor.
+                </p>
+            </section>
+            <section>
+                <h3 style="margin-top: 60px;">
+                    Código Fonte & Procedimento
+                </h3>
+                <img src="./img/servo3.jpg">
+                <p>
+                    Código em C++ utilizando a IDE do Arduino.
+                </p>
+                <p>
+                    1- Conecte o sensor ultrassônico HC-SR04 ao Arduino utilizando os pinos 7 (Echo) e 8 (Trig).<br>
+                    2- Conecte o servo motor ao pino 9 do Arduino para controlar sua rotação.<br>
+                    3- No código, os pinos do sensor ultrassônico são configurados como input/output para enviar e receber<br>
+                    os pulsos ultrassônicos. O tempo de retorno do pulso é calculado com a função pulseIn().<br>
+                    4- A distância é calculada com base no tempo de retorno e convertida em centímetros.<br>
+                    5- Dependendo da distância: <br>
+                        Se a distância for menor ou igual a 50 cm, o servo se move para a posição 0°.<br>
+                        Se a distância estiver entre 51 cm e 230 cm, a função map() ajusta o ângulo do servo motor<br>
+                        proporcionalmente, movendo-o entre 1° e 180°.<br>
+                        Para distâncias acima de 230 cm, o servo se posiciona em 180°.
+                </p>
+            </section>
+            <section>
+                <h3 style="margin-top: 60px;">
+                    Resultados & Conclusão
+                </h3>
+                <p>
+                    Após carregar o código e montar o circuito, o sistema funcionou conforme esperado. O servo motor ajustou<br>
+                    seu ângulo de rotação com base na distância medida pelo sensor ultrassônico. 
+                </p>
+                <video src="./video/servoVideo.mp4" controls>
+                </video>
+                <p>
+                    Este projeto demonstrou a integração de um sensor ultrassônico com um servo motor, permitindo que o movimento<br>
+                    rotacional do servo fosse controlado de acordo com a proximidade de objetos.
+                </p>
+            </section>
+        </main> 
+    </div>   
+</body>
+</html>
