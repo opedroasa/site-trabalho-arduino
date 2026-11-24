@@ -35,7 +35,7 @@ equipe.html           integrantes do grupo
 img/  video/          fotos e vídeos das montagens
 ```
 
-Feito só com HTML e CSS, sem framework e sem build. Publicado pelo GitHub Pages direto da branch `main`.
+Feito só com HTML e CSS, sem framework e sem build. Publicado pelo GitHub Pages direto da branch `main`. Para ver localmente, basta abrir o `index.html` no navegador.
 
 ## Equipe
 
